@@ -6,15 +6,13 @@ import Layout from '../components/Layout';
 const Home = ({ pokemon }) => (
   <div>
     <Layout title="NextJS Pokedex">
-      <h1 className="text-4xl mb-8 text-center">NextJS Pokedex</h1>
-
       <ul>
         {pokemon.map((pokeman, index) => (
           <li key={pokeman.name}>
             <Link href={`/pokemon/${index + 1}`}>
               <a
-                className="border p-4 border-gray my-2 capitalize flex items-center text-lg bg-gray-200 rounded-md"
-                title={pokeman.name}
+                className="border p-4 my-2 capitalize flex items-center text-lg rounded-md shadow-md bg-gray-200 border-gray hover:bg-gray-300 hover:border-gray-300 transition duration-500"
+                title={`${pokeman.name} details`}
               >
                 <Image
                   src={pokeman.imageUrl}

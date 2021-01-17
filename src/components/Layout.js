@@ -1,14 +1,18 @@
 import Head from 'next/head';
 
+import Header from './Header';
+
 const Layout = ({ title = 'Pokedex', children }) => {
   return (
-    <div className="bg-gray-300">
+    <div className="bg-gray-300 pt-8 pb-8">
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="container mx-auto max-w-xl pt-8 pb-8 min-h-screen">
+      <Header />
+
+      <main className="container mx-auto max-w-xl  min-h-screen">
         {children}
       </main>
     </div>

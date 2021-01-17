@@ -43,9 +43,9 @@ const Pokemon = ({ name, imageUrl, weight, height, types }) => {
         <ul>
           {types.map((type) => (
             <li key={type.type.name} className="flex items-center mt-2">
-              <span class="h-6 flex items-center sm:h-7">
+              <span className="h-6 flex items-center sm:h-7">
                 <svg
-                  class="flex-shrink-0 h-5 w-5 text-cyan-500"
+                  className="flex-shrink-0 h-5 w-5 text-cyan-500"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >

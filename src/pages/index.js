@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 
 const Home = ({ pokemon }) => (
   <div>
-    <Layout title="NextJS Pokedex">
+    <Layout title="Pokedex">
       <ul>
         {pokemon.map((pokeman, index) => (
           <li key={pokeman.name}>

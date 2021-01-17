@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import Layout from '../components/Layout';
 
@@ -15,12 +16,14 @@ const Home = ({ pokemon }) => (
                 className="border p-4 border-gray my-2 capitalize flex items-center text-lg bg-gray-200 rounded-md"
                 title={pokeman.name}
               >
-                <img
-                  className="w-20 h-20 mr-3"
+                <Image
                   src={pokeman.imageUrl}
                   alt={pokeman.name}
+                  width="80"
+                  height="80"
+                  layout="fixed"
                 />
-                <span className="mr-2 font-bold">{index + 1}.</span>
+                <span className="ml-2 mr-2 font-bold">{index + 1}.</span>
                 {pokeman.name}
               </a>
             </Link>

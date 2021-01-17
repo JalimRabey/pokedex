@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import Layout from '../../components/Layout';
@@ -16,29 +17,39 @@ const Pokemon = ({ name, imageUrl, weight, height, types }) => {
 
   return (
     <Layout title={name}>
-      <h1 className="text-4xl mb-2 text-center capitalize">{name}</h1>
+      <div className="border p-4 border-gray my-2 text-lg bg-gray-200 rounded-md">
+        <h1 className="text-4xl mb-2 text-center capitalize">{name}</h1>
 
-      <img className="mx-auto" src={imageUrl} alt={name} />
+        <div className="flex items-center justify-center">
+          <Image
+            src={imageUrl}
+            alt={name}
+            width="200"
+            height="200"
+            layout="fixed"
+          />
+        </div>
 
-      <p>
-        <span className="font-bold mr-2">Weight: </span> {weight}
-      </p>
+        <p>
+          <span className="font-bold mr-2">Weight: </span> {weight}
+        </p>
 
-      <p>
-        <span className="font-bold mr-2">Height: </span> {height}
-      </p>
+        <p>
+          <span className="font-bold mr-2">Height: </span> {height}
+        </p>
 
-      <h2 className="text-2xl mt-6 mb-2">Types</h2>
+        <h2 className="text-2xl mt-6 mb-2">Types</h2>
 
-      {types.map((type) => (
-        <p key={type.type.name}>{type.type.name}</p>
-      ))}
+        {types.map((type) => (
+          <p key={type.type.name}>{type.type.name}</p>
+        ))}
 
-      <p className="mt-10 text-center pb-6">
-        <Link href="/">
-          <a className="text-2xl underline">Home</a>
-        </Link>
-      </p>
+        <p className="mt-10 text-center">
+          <Link href="/">
+            <a className="text-2xl underline">Home</a>
+          </Link>
+        </p>
+      </div>
     </Layout>
   );
 };

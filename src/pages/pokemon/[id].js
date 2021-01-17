@@ -17,7 +17,7 @@ const Pokemon = ({ name, imageUrl, weight, height, types }) => {
 
   return (
     <Layout title={name}>
-      <div className="border p-4 border-gray my-2 text-lg bg-gray-200 rounded-md shadow-md">
+      <div className="border p-4 border-gray my-2 text-lg text-black dark:text-white bg-gray-200 dark:bg-gray-700 dark:border-gray-700 rounded-md shadow-md">
         <h1 className="text-4xl mb-2 text-center capitalize">{name}</h1>
 
         <div className="flex items-center justify-center">
@@ -38,7 +38,7 @@ const Pokemon = ({ name, imageUrl, weight, height, types }) => {
           <span className="font-bold mr-2">Height: </span> {height}
         </p>
 
-        <h2 className="text-2xl mt-6 mb-2">Types</h2>
+        <h2 className="text-2xl mt-6 mb-2 font-bold">Types</h2>
 
         {types.map((type) => (
           <p key={type.type.name}>{type.type.name}</p>

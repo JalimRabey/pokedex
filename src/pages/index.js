@@ -6,12 +6,25 @@ import Layout from '../components/Layout';
 const Home = ({ pokemon }) => (
   <div>
     <Layout title="Pokedex">
+      <p className="text-center">
+        <Link href="https://github.com/JalimRabey/pokedex">
+          <a
+            className="text-blue-600 font-bold hover:text-blue-800 transition duration-500"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Pokedex - Github"
+          >
+            View project source code
+          </a>
+        </Link>
+      </p>
+
       <ul>
         {pokemon.map((pokeman, index) => (
           <li key={pokeman.name}>
             <Link href={`/pokemon/${index + 1}`}>
               <a
-                className="border p-4 my-2 capitalize flex items-center text-lg rounded-md shadow-md bg-gray-200 border-gray hover:bg-gray-300 hover:border-gray-300 transition duration-500"
+                className="border p-4 my-2 capitalize flex items-center text-lg rounded-md shadow-md text-black dark:text-white bg-gray-200 dark:bg-gray-600 border-gray dark:border-gray-600 hover:bg-gray-300 hover:border-gray-300 dark:hover:bg-gray-700 dark:hover:border-gray-700 transition duration-500"
                 title={`${pokeman.name} details`}
               >
                 <Image

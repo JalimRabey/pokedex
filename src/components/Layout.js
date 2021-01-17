@@ -4,7 +4,7 @@ import Header from './Header';
 
 const Layout = ({ title = 'Pokedex', children }) => {
   return (
-    <div className="bg-gray-300 pt-8 pb-8">
+    <div className="bg-gray-300 dark:bg-gray-800 pt-8 pb-8">
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
